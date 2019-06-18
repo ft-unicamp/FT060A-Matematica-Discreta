@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[portuguese, ruled, linesnumbered]{algorithm2e}
+\begin{document}
+	%Código
+	\begin{algorithm}[H]
+		\SetAlgoLined
+		\Entrada{		
+		Grafo 1 = ($V_1$,$E_1$), 
+		Grafo 2 = ($V_2$,$E_2$),\\
+	    $S_v$ = similaridade $V_1$ e $V_2$ ,\\
+	    $S_a$ = similaridade entre $E_1$ e $E_2$, \\
+        \\$\alpha$
+        } 
+		\Saida{Similaridade entre os dois mapas conceituais.}
+		\Inicio{			
+			$X_v$ = Matriz de associação entre $V_1$ e $V_2$ \\
+			$X_a$ = Matriz de associação entre $E_1$ e $E_2$ \\
+			$F_v$ = $\sum$  (1- $| (Xv_ij - Sv_ij)|)$\\
+			$F_a$ = $\sum$  (1- $| (Xa_ij - Sa_ij)|)$\\
+			$F(x) =  \frac{\alpha}{|V_1| . |V_2|} F_v + \frac{(1-\alpha)}{|E_1| . |E_2|} F_a $
+			 
+			 
+			
+		}
+		\Retorna{$F(x)$}
+		\label{alg1}
+		\caption{\textsc{Similaridade entre mapas conceituais.}}
+	\end{algorithm}
+\end{document}
